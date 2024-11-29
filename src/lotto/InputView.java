@@ -12,7 +12,7 @@ public class InputView {
         System.out.println(USER_INPUT_MESSAGE);
         Scanner scanner = new Scanner(System.in);
 
-        for(int i = 0; i < 6; i++) {
+        while (userInputs.size() != 6) {
             int userInput = scanner.nextInt();
             if(isDuplicate(userInput)) {
                 System.out.println("같은 번호" + userInput + "이 이미 선택되었습니다. 다른 번호를 선택하세요");
