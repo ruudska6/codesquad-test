@@ -5,19 +5,20 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomNumberGenerator {
-    List<Integer> randomNumbers = new ArrayList<>();
-    Random random = new Random();
+    private static List<Integer> randomNumbers = new ArrayList<>();
+    private static Random random = new Random();
 
-    public void generateRandomNumbers() {
+    public static List<Integer> generateRandomNumbers() {
         while (randomNumbers.size() != 6) {
             int randomNumber = random.nextInt(45) + 1;
             if (!isDuplicate(randomNumber)) {
                 randomNumbers.add(randomNumber);
             }
         }
+        return randomNumbers;
     }
 
-    private boolean isDuplicate(int number) {
+    private static boolean isDuplicate(int number) {
         return randomNumbers.contains(number);
     }
 }
