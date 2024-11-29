@@ -14,4 +14,15 @@ public class OutputView {
         }
         System.out.println();
     }
+
+    public void printLottoNumbers(List<Integer> lottoNumbers) {
+        System.out.print("로또 당첨 숫자: ");
+        for (int i = 0; i < lottoNumbers.size(); i++) {
+            System.out.print(lottoNumbers.get(i));
+            if (i < lottoNumbers.size() - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+    }
 }
