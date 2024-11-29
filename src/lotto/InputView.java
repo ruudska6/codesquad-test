@@ -8,7 +8,7 @@ public class InputView {
     private static final String USER_INPUT_MESSAGE = "1~45 중 로또 번호를 여섯개 입력하세요";
     List<Integer> userInputs = new ArrayList<>();
 
-    public void getUserInput() {
+    public List<Integer> getUserInput() {
         System.out.println(USER_INPUT_MESSAGE);
         Scanner scanner = new Scanner(System.in);
 
@@ -21,6 +21,7 @@ public class InputView {
             }
         }
         scanner.close();
+        return userInputs;
     }
 
     private boolean isDuplicate(int number) {
