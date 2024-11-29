@@ -25,4 +25,8 @@ public class OutputView {
         }
         System.out.println();
     }
+
+    public void printMatchCount(int matchCount) {
+        System.out.println("일치한 숫자 개수: " + matchCount + "개");
+    }
 }
